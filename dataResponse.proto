@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package robotics;
+
+message StringData {
+    string data = 1;
+}
+
+message IntData {
+    uint64 data = 1;
+}
+
+message DataResponse {
+    string topic = 1;
+
+    oneof payload{
+        StringData string_data = 2;
+        IntData int_data = 3;
+    }
+}

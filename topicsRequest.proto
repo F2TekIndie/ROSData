@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package robotics;
+
+message Topic {
+    string name = 1;
+    repeated string types = 2;
+}
+
+message TopicsResponse {
+    repeated Topic topics = 1;
+}
+
+message TopicsRequest {
+    string name = 1;
+}

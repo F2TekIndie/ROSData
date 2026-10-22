@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package robotics;
+
+message SubscribeRequest {
+    string name = 1;
+}
+
+message SubscribeResponse {
+    bool subscribed = 1;
+}

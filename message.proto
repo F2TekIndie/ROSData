@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package robotics;
+
+import "topicsRequest.proto";
+import "subscribeRequest.proto";
+import "unsubscribeRequest.proto";
+import "dataResponse.proto";
+import "exitRequest.proto";
+
+message Message{
+    uint64 request_id = 1;
+
+    oneof payload{
+        TopicsRequest  topics_request = 2;
+        TopicsResponse topics_response = 3;
+        SubscribeRequest  sub_request = 4;
+        SubscribeResponse sub_response = 5;
+        UnsubscribeRequest  unsub_request = 6;
+        UnsubscribeResponse unsub_response = 7;
+        DataResponse data_response = 8;
+        ExitRequest exit_request = 9;
+    }
+}

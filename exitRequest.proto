@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package robotics;
+
+message ExitRequest {
+    string name = 1;
+}
+
